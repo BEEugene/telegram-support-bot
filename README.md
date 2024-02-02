@@ -8,6 +8,8 @@ Easy way to use Telegram bot to hide your identity. Useful for support, anonymou
 3. Any chat participant can reply on a forwarded message 
 4. Bot will copy the message and send it to your client
 
+If client user deny forward his username with messages support bot also write message with client ID in support chat, so support team must reply to this message, not user original message.
+
 ## .env variables
 
 You need to specify these env variables to run this bot. If you run it locally, you can also write them in `.env` text file.
@@ -22,9 +24,10 @@ WELCOME_MESSAGE=  # text of a message that bot will write on /start command
 # If user don't allow forward his messages Bot adds his comment with thue user_id to reply
 # Support team must reply to "bot reply", not to original user forwarded message
 # Customize message for support team here:
-REPLY_TO_THIS_MESSAGE=User above don't allow forward his messages. Reply to this message.
-# If support reply to forwarded messages with hidded sender, bor warns with next error:
-WRONG_REPLY=User above don't allow forward his messages. You must reply to bot reply under user forwarded message.
+REPLY_TO_THIS_MESSAGE=User above not allow forward his messages. Reply to this message.
+
+# If support reply to forwarded messages with hidded sender, bot warns with next error:
+WRONG_REPLY=User above not allow forward his messages. You must reply to bot reply under user forwarded message.
 
 ```
 
